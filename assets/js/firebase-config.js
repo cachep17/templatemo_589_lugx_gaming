@@ -10,7 +10,7 @@ import {
   getDocs,
   doc,
   getDoc,
-} from "https://www.gstatic.com/firebasejs/11.7.3/firebase-analytics.js";
+} from "https://www.gstatic.com/firebasejs/11.7.3/firebase-firestore.js"; 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -28,8 +28,7 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
-
+const db = getFirestore(app);
 // Initialize Cloud Firestore and get a reference to the service
 
 const querySnapshot = await getDocs(collection(db, "game"));
