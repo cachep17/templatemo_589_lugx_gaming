@@ -1,0 +1,4 @@
+.trending .container .row .thumb a img{
+  height: 450px;
+  object-fit: cover;
+}
