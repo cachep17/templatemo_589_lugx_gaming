@@ -49,14 +49,14 @@ async function displayProducts() {
     slide.innerHTML = `
                   <div class="item">
             <div class="thumb">
-              <a href="product-details.html"><img src="${product.thumbnail}" alt="" /></a>
+              <a href="product-details.html?game=${product.url}"><img src="${product.thumbnail}" alt="" /></a>
              <span class="price"><em>${product.Price}$</em>${product.salePrice
       }$</span>
             </div>
             <div class="down-content">
               <span class="category">${product.category}</span>
               <h4>${product.Name}</h4>
-              <a href="product-details.html"><i class="fa fa-shopping-bag"></i></a>
+              <a href="product-details.html?game=${product.url}"><i class="fa fa-shopping-bag"></i></a>
             </div>
           </div>
     `;
