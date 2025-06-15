@@ -1,4 +1,3 @@
-
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.7.3/firebase-app.js";
 import {
@@ -30,19 +29,37 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
-var gameName = location.search.split('game=')[1]
-console.log("🚀 ~ gameName:", gameName)
+var gameName = location.search.split("game=")[1];
+console.log("🚀 ~ gameName:", gameName);
 async function getProductDetail() {
-  const productCollection = query(collection(db, "game"), where("url", "==", gameName));
+  const productCollection = query(
+    collection(db, "game"),
+    where("url", "==", gameName)
+  );
   const querySnapshot = await getDocs(productCollection);
 
   querySnapshot.forEach((doc) => {
     const product = doc.data();
-    console.log("🚀 ~ querySnapshot.forEach ~ product:", product)
+    console.log("🚀 ~ querySnapshot.forEach ~ product:", product);
     const gameNameElement = document.querySelector(".single-product h4");
     gameNameElement.textContent = product.Name;
-    const gameImageElement = document.querySelector(".single-product .left-image img");
-    console.log("🚀 ~ querySnapshot.forEach ~ gameImageElement:", gameImageElement)
+    const priceElement = document.querySelector(".price");
+
+    const oldPriceElement = priceElement.querySelector("em");
+
+    oldPriceElement.textContent = product.Price;
+
+    oldPriceElement.nextSibling.nodeValue = ` $${product.salePrice}`;
+    const gameDescElement = document.querySelector(".single-product p");
+    gameDescElement.textContent = product.Description;
+    const gameImageElement = document.querySelector(
+      ".single-product .left-image img"
+    );
+
+    console.log(
+      "🚀 ~ querySnapshot.forEach ~ gameImageElement:",
+      gameImageElement
+    );
     gameImageElement.src = product.thumbnail;
     // Create a swiper-slide element
     // const slide = document.createElement("div");
@@ -69,8 +86,9 @@ async function getProductDetail() {
   });
 
   // Reinitialize Swiper after adding slides
-
 }
 
 // Call the function to display products
-if (gameName) { getProductDetail(); }
+if (gameName) {
+  getProductDetail();
+}
