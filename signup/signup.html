@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -9,7 +10,9 @@
   <link rel="stylesheet" href="../assets/css/templatemo-lugx-gaming.css">
   <link rel="stylesheet" href="../assets/css/owl.css">
   <link rel="stylesheet" href="../assets/css/animate.css">
+  <link rel="stylesheet" href="../assets/css/signup.css">
 </head>
+
 <body>
   <div id="js-preloader" class="js-preloader">
     <div class="preloader-inner">
@@ -45,7 +48,7 @@
       <div class="row">
         <div class="col-lg-12">
           <h3>Đăng ký</h3>
-          <span class="breadcrumb"><a href="../index.html">Home</a>  >  Đăng ký</span>
+          <span class="breadcrumb"><a href="../index.html">Home</a> > Đăng ký</span>
         </div>
       </div>
     </div>
@@ -54,7 +57,7 @@
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-6">
-          <div class="right-content">
+          <div class="right-content signup-form">
             <form id="signup-form" action="#" method="post">
               <div class="row">
                 <div class="col-lg-6">
@@ -79,12 +82,16 @@
                 </div>
                 <div class="col-lg-12">
                   <fieldset>
-                    <input type="password" name="password" id="password" placeholder="Mật khẩu..." required>
+                    <input type="password" name="password" id="password" placeholder="Mật khẩu..." required
+                      minlength="6">
+                    <div class="password-strength" id="password-strength"></div>
                   </fieldset>
                 </div>
                 <div class="col-lg-12">
                   <fieldset>
-                    <input type="password" name="confirm_password" id="confirm_password" placeholder="Nhập lại mật khẩu..." required>
+                    <input type="password" name="confirm_password" id="confirm_password"
+                      placeholder="Nhập lại mật khẩu..." required>
+                    <div class="form-error" id="confirm-password-error">Mật khẩu không khớp</div>
                   </fieldset>
                 </div>
                 <div class="col-lg-12">
@@ -105,7 +112,8 @@
   <footer>
     <div class="container">
       <div class="col-lg-12">
-        <p>Copyright © 2048 LUGX Gaming Company. All rights reserved. &nbsp;&nbsp; <a rel="nofollow" href="https://templatemo.com" target="_blank">Design: TemplateMo</a></p>
+        <p>Copyright © 2048 LUGX Gaming Company. All rights reserved. &nbsp;&nbsp; <a rel="nofollow"
+            href="https://templatemo.com" target="_blank">Design: TemplateMo</a></p>
       </div>
     </div>
   </footer>
@@ -115,5 +123,7 @@
   <script src="../assets/js/owl-carousel.js"></script>
   <script src="../assets/js/counter.js"></script>
   <script src="../assets/js/custom.js"></script>
+  <script src="../assets/js/signup.js" type="module"></script>
 </body>
+
 </html>

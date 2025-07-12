@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+
+  <title>Lugx Gaming - Checkout</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Additional CSS Files -->
+  <link rel="stylesheet" href="assets/css/fontawesome.css" />
+  <link rel="stylesheet" href="assets/css/templatemo-lugx-gaming.css" />
+  <link rel="stylesheet" href="assets/css/owl.css" />
+  <link rel="stylesheet" href="assets/css/animate.css" />
+  <link rel="stylesheet" href="assets/css/purchase.css" />
+</head>
+
+<body>
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav class="main-nav">
+            <!-- ***** Logo Start ***** -->
+            <a href="index.html" class="logo">
+              <img src="assets/images/logo.png" alt="" style="width: 158px" />
+            </a>
+            <!-- ***** Logo End ***** -->
+            <!-- ***** Menu Start ***** -->
+            <ul class="nav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="shop.html">Our Shop</a></li>
+              <li><a href="product-details.html">Product Details</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="#" id="auth-link">Sign In</a></li>
+            </ul>
+            <a class="menu-trigger">
+              <span>Menu</span>
+            </a>
+            <!-- ***** Menu End ***** -->
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+  <div class="page-heading header-text">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h3>Checkout</h3>
+          <span class="breadcrumb"><a href="index.html">Home</a> > <a href="shop.html">Shop</a> > Checkout</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section checkout-section">
+    <div class="container">
+      <div class="row">
+        <!-- Order Summary -->
+        <div class="col-lg-6">
+          <div class="order-summary">
+            <h4>Order Summary</h4>
+            <div class="order-item">
+              <div class="item-image">
+                <img id="checkout-game-image" src="" alt="Game Image" />
+              </div>
+              <div class="item-details">
+                <h5 id="checkout-game-name">Loading...</h5>
+                <p id="checkout-game-description">Loading description...</p>
+                <div class="quantity-control">
+                  <label for="quantity">Quantity:</label>
+                  <input type="number" id="quantity" value="1" min="1" max="10" />
+                </div>
+              </div>
+              <div class="item-price">
+                <span class="old-price" id="checkout-old-price">$0</span>
+                <span class="new-price" id="checkout-new-price">$0</span>
+              </div>
+            </div>
+            <div class="order-total">
+              <div class="total-row">
+                <span>Subtotal:</span>
+                <span id="subtotal">$0</span>
+              </div>
+              <div class="total-row">
+                <span>Tax (10%):</span>
+                <span id="tax">$0</span>
+              </div>
+              <div class="total-row total">
+                <span><strong>Total:</strong></span>
+                <span id="total"><strong>$0</strong></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Payment Information -->
+        <div class="col-lg-6">
+          <div class="payment-form">
+            <h4>Payment Information</h4>
+            <form id="checkout-form">
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" class="form-control" id="email" required readonly />
+              </div>
+
+              <div class="form-group">
+                <label for="full-name">Full Name</label>
+                <input type="text" class="form-control" id="full-name" required />
+              </div>
+
+              <div class="form-group">
+                <label for="address">Address</label>
+                <textarea class="form-control" id="address" rows="3" required></textarea>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="city">City</label>
+                    <input type="text" class="form-control" id="city" required />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="zip">ZIP Code</label>
+                    <input type="text" class="form-control" id="zip" required />
+                  </div>
+                </div>
+              </div>
+
+              <div class="payment-method">
+                <h5>Payment Method</h5>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="payment" id="credit-card" value="credit-card"
+                    checked />
+                  <label class="form-check-label" for="credit-card">
+                    <i class="fa fa-credit-card"></i> Credit Card
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="payment" id="paypal" value="paypal" />
+                  <label class="form-check-label" for="paypal">
+                    <i class="fa fa-paypal"></i> PayPal
+                  </label>
+                </div>
+              </div>
+
+              <div id="credit-card-details" class="payment-details">
+                <div class="form-group">
+                  <label for="card-number">Card Number</label>
+                  <input type="text" class="form-control" id="card-number" placeholder="1234 5678 9012 3456" required />
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="expiry">Expiry Date</label>
+                      <input type="text" class="form-control" id="expiry" placeholder="MM/YY" required />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="cvv">CVV</label>
+                      <input type="text" class="form-control" id="cvv" placeholder="123" required />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="terms" required />
+                  <label class="form-check-label" for="terms">
+                    I agree to the <a href="#">Terms and Conditions</a>
+                  </label>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block">
+                <i class="fa fa-lock"></i> Complete Purchase
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="col-lg-12">
+        <p>
+          Copyright © 2048 LUGX Gaming Company. All rights reserved.
+          &nbsp;&nbsp;
+          <a rel="nofollow" href="https://templatemo.com" target="_blank">Design: TemplateMo</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/js/isotope.min.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/counter.js"></script>
+  <script src="assets/js/custom.js"></script>
+  <script src="assets/js/checkout.js" type="module"></script>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+/* Header authentication styling */
+
+#auth-link {
+  display: flex !important;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 15px !important;
+  border-radius: 20px;
+  background: rgba(254, 63, 64, 0.1);
+  border: 1px solid rgba(254, 63, 64, 0.3);
+  transition: all 0.3s ease;
+  text-decoration: none !important;
+  color: #fff !important;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+#auth-link:hover {
+  background: rgba(254, 63, 64, 0.2);
+  border-color: #fe3f40;
+  transform: translateY(-1px);
+  color: #fff !important;
+  text-decoration: none !important;
+}
+
+#auth-link i {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+#auth-link .fa-sign-out {
+  margin-left: 5px;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+#auth-link:hover .fa-sign-out {
+  opacity: 1;
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+  #auth-link {
+    padding: 6px 12px !important;
+    font-size: 14px;
+    gap: 6px;
+  }
+
+  #auth-link i {
+    font-size: 12px;
+  }
+}
+
+/* Loading state for auth link */
+#auth-link.loading {
+  opacity: 0.6;
+  pointer-events: none;
+}

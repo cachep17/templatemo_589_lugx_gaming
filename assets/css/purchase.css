@@ -1,0 +1,277 @@
+/* Additional styles for checkout and order confirmation pages */
+
+.checkout-section,
+.order-confirmation {
+  padding: 80px 0;
+}
+
+.order-summary,
+.payment-form {
+  background: #1e1e1e;
+  border-radius: 10px;
+  padding: 30px;
+  margin-bottom: 30px;
+}
+
+.order-summary h4,
+.payment-form h4 {
+  color: #fff;
+  margin-bottom: 25px;
+  border-bottom: 2px solid #27292a;
+  padding-bottom: 15px;
+}
+
+.order-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+  padding: 20px;
+  background: #27292a;
+  border-radius: 8px;
+}
+
+.item-image {
+  flex: 0 0 120px;
+  margin-right: 20px;
+}
+
+.item-image img {
+  width: 100%;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.item-details {
+  flex: 1;
+}
+
+.item-details h5 {
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.item-details p {
+  color: #aaa;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.quantity-control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.quantity-control label {
+  color: #fff;
+  font-size: 14px;
+}
+
+.quantity-control input {
+  width: 60px;
+  height: 35px;
+  background: #000;
+  border: 1px solid #444;
+  color: #fff;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.item-price {
+  flex: 0 0 120px;
+  text-align: right;
+}
+
+.old-price {
+  color: #888;
+  text-decoration: line-through;
+  font-size: 14px;
+  display: block;
+}
+
+.new-price {
+  color: #fe3f40;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.order-total {
+  border-top: 2px solid #444;
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+.total-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.total-row.total {
+  border-top: 1px solid #444;
+  padding-top: 15px;
+  margin-top: 15px;
+  font-size: 18px;
+}
+
+.payment-form .form-group {
+  margin-bottom: 20px;
+}
+
+.payment-form label {
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.payment-form .form-control {
+  background: #000;
+  border: 1px solid #444;
+  color: #fff;
+  padding: 12px 15px;
+  border-radius: 5px;
+}
+
+.payment-form .form-control:focus {
+  background: #000;
+  border-color: #fe3f40;
+  color: #fff;
+  box-shadow: 0 0 0 0.2rem rgba(254, 63, 64, 0.25);
+}
+
+.payment-method {
+  margin: 25px 0;
+}
+
+.payment-method h5 {
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.form-check {
+  margin-bottom: 10px;
+}
+
+.form-check-label {
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.form-check-input:checked {
+  background-color: #fe3f40;
+  border-color: #fe3f40;
+}
+
+.payment-details {
+  background: #27292a;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 15px;
+}
+
+.btn-primary {
+  background: #fe3f40;
+  border: none;
+  padding: 12px 30px;
+  font-weight: 600;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.btn-primary:hover {
+  background: #e63346;
+}
+
+/* Order Confirmation Styles */
+.confirmation-content {
+  background: #1e1e1e;
+  border-radius: 10px;
+  padding: 40px;
+  color: #fff;
+}
+
+.order-details h4 {
+  color: #fe3f40;
+  margin: 30px 0 20px 0;
+  border-bottom: 2px solid #27292a;
+  padding-bottom: 10px;
+}
+
+.order-info,
+.delivery-info {
+  background: #27292a;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.order-info p,
+.delivery-info p {
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.game-details {
+  background: #27292a;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.badge-warning {
+  background-color: #ffc107;
+  color: #000;
+}
+
+.alert-info {
+  background-color: rgba(23, 162, 184, 0.2);
+  border: 1px solid #17a2b8;
+  color: #b3d7ff;
+}
+
+.alert-info h5 {
+  color: #17a2b8;
+}
+
+.action-buttons .btn {
+  margin: 0 10px;
+  padding: 12px 25px;
+}
+
+.btn-secondary {
+  background: #6c757d;
+  border: none;
+}
+
+.btn-secondary:hover {
+  background: #5a6268;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .order-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .item-image {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+
+  .item-price {
+    margin-top: 15px;
+  }
+
+  .action-buttons .btn {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+  }
+}
